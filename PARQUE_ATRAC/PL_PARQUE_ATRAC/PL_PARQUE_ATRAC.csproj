@@ -123,7 +123,7 @@
     <Content Include="favicon.ico" />
     <Content Include="frmParqueAtrac.aspx" />
     <Content Include="Global.asax" />
-    <Content Include="Imagenes\Carrusel.png" />
+    <Content Include="Imagenes\Caballitos.png" />
     <Content Include="Imagenes\Chocones.png" />
     <Content Include="Imagenes\La torre.png" />
     <Content Include="Imagenes\Montaña rusa.png" />

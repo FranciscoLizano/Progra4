@@ -24,7 +24,7 @@ namespace PL_PARQUE_ATRAC
 
         protected void btnCaballitos_Click(object sender, EventArgs e)
         {
-            obj_ParqueAtrac_DAL.sNombre = "Caballitos mágicos";
+            obj_ParqueAtrac_DAL.sNombre = "Caballitos";
             obj_ParqueAtrac_DAL.sTipo = "Carrusel";
             obj_ParqueAtrac_DAL.byCapacidad = 20;
             string sCapacidad = obj_ParqueAtrac_DAL.byCapacidad + " Personas";
@@ -284,6 +284,159 @@ namespace PL_PARQUE_ATRAC
             obj_ParqueAtrac_DAL.byCapacidad = 10;
             string sCapacidad = obj_ParqueAtrac_DAL.byCapacidad + " Personas";
             obj_ParqueAtrac_DAL.byDuracion = 3;
+            string sDuracion = obj_ParqueAtrac_DAL.byDuracion + " Minutos";
+            obj_ParqueAtrac_DAL.sDisponibilidad = "En operación";
+            obj_ParqueAtrac_DAL.sHorario = "K-D 9:00 AM-5:00 PM";
+
+            var html = new StringBuilder();
+
+            html.Append("<table>");
+            html.Append("<tbody>");
+            //En esta fila de define el encabezados de tabla
+            html.Append("<tr>");
+            html.Append("<th>Atributo</th>");
+            html.Append("<th>Valor</th>");
+            html.Append("</tr>");
+            //Las siguientes son las filas de Detalle de la tabla
+            html.Append("<tr>");
+            html.Append("<td>Nombre de la atracción</td>");
+            html.Append("<td>" + obj_ParqueAtrac_DAL.sNombre + "</td>");
+            html.Append("</tr>");
+            html.Append("<tr>");
+            html.Append("<td>Tipo de atracción</td>");
+            html.Append("<td>" + obj_ParqueAtrac_DAL.sTipo + "</td>");
+            html.Append("</tr>");
+            html.Append("<tr>");
+            html.Append("<td>Capacidad</td>");
+            html.Append("<td>" + sCapacidad + "</td>");
+            html.Append("</tr>");
+            html.Append("<tr>");
+            html.Append("<td>Duración</td>");
+            html.Append("<td>" + sDuracion + "</td>");
+            html.Append("</tr>");
+            html.Append("<tr>");
+            html.Append("<td>Disponibilidad</td>");
+            html.Append("<td>" + obj_ParqueAtrac_DAL.sDisponibilidad + "</td>");
+            html.Append("</tr>");
+            html.Append("<tr>");
+            html.Append("<td>Horario </td>");
+            html.Append("<td>" + obj_ParqueAtrac_DAL.sHorario + "</td>");
+            html.Append("</tr>");
+            html.Append("</tbody>");
+            html.Append("</table>");
+
+            divTablaInfoAtraccion.InnerHtml = html.ToString();
+        }
+
+        protected void btnStarFlyer_Click(object sender, EventArgs e)
+        {
+            obj_ParqueAtrac_DAL.sNombre = "Star Flyer";
+            obj_ParqueAtrac_DAL.sTipo = "Torre";
+            obj_ParqueAtrac_DAL.byCapacidad = 15;
+            string sCapacidad = obj_ParqueAtrac_DAL.byCapacidad + " Personas";
+            obj_ParqueAtrac_DAL.byDuracion = 2;
+            string sDuracion = obj_ParqueAtrac_DAL.byDuracion + " Minutos";
+            obj_ParqueAtrac_DAL.sDisponibilidad = "En operación";
+            obj_ParqueAtrac_DAL.sHorario = "K-D 9:00 AM-5:00 PM";
+
+            var html = new StringBuilder();
+
+            html.Append("<table>");
+            html.Append("<tbody>");
+            //En esta fila de define el encabezados de tabla
+            html.Append("<tr>");
+            html.Append("<th>Atributo</th>");
+            html.Append("<th>Valor</th>");
+            html.Append("</tr>");
+            //Las siguientes son las filas de Detalle de la tabla
+            html.Append("<tr>");
+            html.Append("<td>Nombre de la atracción</td>");
+            html.Append("<td>" + obj_ParqueAtrac_DAL.sNombre + "</td>");
+            html.Append("</tr>");
+            html.Append("<tr>");
+            html.Append("<td>Tipo de atracción</td>");
+            html.Append("<td>" + obj_ParqueAtrac_DAL.sTipo + "</td>");
+            html.Append("</tr>");
+            html.Append("<tr>");
+            html.Append("<td>Capacidad</td>");
+            html.Append("<td>" + sCapacidad + "</td>");
+            html.Append("</tr>");
+            html.Append("<tr>");
+            html.Append("<td>Duración</td>");
+            html.Append("<td>" + sDuracion + "</td>");
+            html.Append("</tr>");
+            html.Append("<tr>");
+            html.Append("<td>Disponibilidad</td>");
+            html.Append("<td>" + obj_ParqueAtrac_DAL.sDisponibilidad + "</td>");
+            html.Append("</tr>");
+            html.Append("<tr>");
+            html.Append("<td>Horario </td>");
+            html.Append("<td>" + obj_ParqueAtrac_DAL.sHorario + "</td>");
+            html.Append("</tr>");
+            html.Append("</tbody>");
+            html.Append("</table>");
+
+            divTablaInfoAtraccion.InnerHtml = html.ToString();
+        }
+
+        protected void btnTarantula_Click(object sender, EventArgs e)
+        {
+            obj_ParqueAtrac_DAL.sNombre = "Tarántula";
+            obj_ParqueAtrac_DAL.sTipo = "Montaña rusa";
+            obj_ParqueAtrac_DAL.byCapacidad = 25;
+            string sCapacidad = obj_ParqueAtrac_DAL.byCapacidad + " Personas";
+            obj_ParqueAtrac_DAL.byDuracion = 5;
+            string sDuracion = obj_ParqueAtrac_DAL.byDuracion + " Minutos";
+            obj_ParqueAtrac_DAL.sDisponibilidad = "En operación";
+            obj_ParqueAtrac_DAL.sHorario = "K-D 9:00 AM-5:00 PM";
+
+            var html = new StringBuilder();
+
+            html.Append("<table>");
+            html.Append("<tbody>");
+            //En esta fila de define el encabezados de tabla
+            html.Append("<tr>");
+            html.Append("<th>Atributo</th>");
+            html.Append("<th>Valor</th>");
+            html.Append("</tr>");
+            //Las siguientes son las filas de Detalle de la tabla
+            html.Append("<tr>");
+            html.Append("<td>Nombre de la atracción</td>");
+            html.Append("<td>" + obj_ParqueAtrac_DAL.sNombre + "</td>");
+            html.Append("</tr>");
+            html.Append("<tr>");
+            html.Append("<td>Tipo de atracción</td>");
+            html.Append("<td>" + obj_ParqueAtrac_DAL.sTipo + "</td>");
+            html.Append("</tr>");
+            html.Append("<tr>");
+            html.Append("<td>Capacidad</td>");
+            html.Append("<td>" + sCapacidad + "</td>");
+            html.Append("</tr>");
+            html.Append("<tr>");
+            html.Append("<td>Duración</td>");
+            html.Append("<td>" + sDuracion + "</td>");
+            html.Append("</tr>");
+            html.Append("<tr>");
+            html.Append("<td>Disponibilidad</td>");
+            html.Append("<td>" + obj_ParqueAtrac_DAL.sDisponibilidad + "</td>");
+            html.Append("</tr>");
+            html.Append("<tr>");
+            html.Append("<td>Horario </td>");
+            html.Append("<td>" + obj_ParqueAtrac_DAL.sHorario + "</td>");
+            html.Append("</tr>");
+            html.Append("</tbody>");
+            html.Append("</table>");
+
+            divTablaInfoAtraccion.InnerHtml = html.ToString();
+        }
+
+        protected void btnTornado_Click(object sender, EventArgs e)
+        {
+            obj_ParqueAtrac_DAL.sNombre = "Tornado";
+            obj_ParqueAtrac_DAL.sTipo = "Montaña rusa";
+            obj_ParqueAtrac_DAL.byCapacidad = 20;
+            string sCapacidad = obj_ParqueAtrac_DAL.byCapacidad + " Personas";
+            obj_ParqueAtrac_DAL.byDuracion = 4;
             string sDuracion = obj_ParqueAtrac_DAL.byDuracion + " Minutos";
             obj_ParqueAtrac_DAL.sDisponibilidad = "En operación";
             obj_ParqueAtrac_DAL.sHorario = "K-D 9:00 AM-5:00 PM";

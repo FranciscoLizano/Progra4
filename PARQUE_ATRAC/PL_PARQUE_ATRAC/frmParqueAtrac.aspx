@@ -9,10 +9,10 @@
 
         <div class="row">
             <section class="col-md-4" aria-labelledby="gettingStartedTitle">
-                <img src="Imagenes/Carrusel.png" class="imgParqueAtrac"/>
-                <h2 id="gettingStartedTitle">Caballitos mágicos</h2>
+                <img src="Imagenes/Caballitos.png" class="imgParqueAtrac"/>
+                <h2 id="gettingStartedTitle">Caballitos</h2>
                 <p>
-                    Caballitos mágicos, Carresul, En operación
+                    Caballitos, Carresul, En operación
                 </p>
                 <p>
                     <asp:Button Text="Seleccionar Atracción" id="btnCaballitos" runat="server" CssClass="btn btn-primary btn-md" OnClick="btnCaballitos_Click"/>
@@ -76,32 +76,32 @@
         <div class="row">
             <section class="col-md-4" aria-labelledby="gettingStartedTitle">
                 <img src="Imagenes/Star Flyer.png" class="imgParqueAtrac"/>
-                <h2 id="gettingStartedTitle">Caballitos mágicos</h2>
+                <h2 id="gettingStartedTitle">Star Flyer</h2>
                 <p>
-                    Caballitos mágicos, Carresul, En operación
+                    Star Flyer, Torre, En operación
                 </p>
                 <p>
-                    <asp:Button Text="Seleccionar Atracción" id="Button1" runat="server" CssClass="btn btn-primary btn-md" OnClick="btnCaballitos_Click"/>
+                    <asp:Button Text="Seleccionar Atracción" id="btnStarFlyer" runat="server" CssClass="btn btn-primary btn-md" OnClick="btnStarFlyer_Click"/>
                 </p>
             </section>
             <section class="col-md-4" aria-labelledby="gettingStartedTitle">
                 <img src="Imagenes/Tarántula.png" class="imgParqueAtrac"/>
-                <h2 id="gettingStartedTitle">Los Chocadores</h2>
+                <h2 id="gettingStartedTitle">Tarántula</h2>
                 <p>
-                    Los Chocadores, Carros chocones, En operación
+                    Tarántula, Montaña rusa, En operación
                 </p>
                 <p>
-                    <asp:Button Text="Seleccionar Atracción" id="Button2" runat="server" CssClass="btn btn-primary btn-md" OnClick="btnChocadores_Click"/>
+                    <asp:Button Text="Seleccionar Atracción" id="btnTarantula" runat="server" CssClass="btn btn-primary btn-md" OnClick="btnTarantula_Click"/>
                 </p>
             </section>
             <section class="col-md-4" aria-labelledby="gettingStartedTitle">
                 <img src="Imagenes/Tornado.png" class="imgParqueAtrac"/>
-                <h2 id="gettingStartedTitle">Al abismo</h2>
+                <h2 id="gettingStartedTitle">Tornado</h2>
                 <p>
-                    Al abismo, Torre, En operación
+                    Tornado, Montaña rusa, En operación
                 </p>
                 <p>
-                    <asp:Button Text="Seleccionar Atracción" id="Button3" runat="server" CssClass="btn btn-primary btn-md" OnClick="btnAbismo_Click"/>
+                    <asp:Button Text="Seleccionar Atracción" id="btnTornado" runat="server" CssClass="btn btn-primary btn-md" OnClick="btnTornado_Click"/>
                 </p>
             </section>
         </div>
