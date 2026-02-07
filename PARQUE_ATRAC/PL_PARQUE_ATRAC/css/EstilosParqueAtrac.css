@@ -1,14 +1,14 @@
 ﻿body {
 }
 
-
+/*Se definen los estilos para las imágenes*/
 .imgParqueAtrac {
     width: 100%;
     min-height: 240px;
     max-height: 240px;
 }
 
-
+/*Se definen las propiedades de la tabla donde se va a mostrar la información de las atracciones*/
 table {
     border-collapse: collapse;
     width: 100%;

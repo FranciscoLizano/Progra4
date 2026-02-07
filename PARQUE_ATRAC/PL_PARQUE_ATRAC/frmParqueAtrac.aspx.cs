@@ -14,7 +14,7 @@ namespace PL_PARQUE_ATRAC
 {
     public partial class frmParqueAtrac : System.Web.UI.Page
     {
-        // Se instancian los objetos de BLL y DAL
+        // Se instancian los objetos de BLL y DAL los BLL no se utilizan aun 
         cls_ParqueAtrac_DAL obj_ParqueAtrac_DAL = new cls_ParqueAtrac_DAL();
         cls_ParqueAtrac_BLL obj_ParqueAtrac_BLL = new cls_ParqueAtrac_BLL();
         protected void Page_Load(object sender, EventArgs e)
