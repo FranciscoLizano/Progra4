@@ -1,6 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="frmParqueAtrac.aspx.cs" Inherits="PL_PARQUE_ATRAC.frmParqueAtrac" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-
     <main>
         <section class="row" aria-labelledby="aspnetTitle">
             <h1 id="aspnetTitle">Parque de Atracciones</h1>
@@ -113,7 +112,58 @@
 
             </div>
         </div>
-        <link href="css/EstilosParqueAtrac.css" rel="stylesheet" />
+        
+        <section class="row" aria-labelledby="aspnetTitle" style="margin-top:40px;">
+            <h1 id="aspnetTitle">Acciones de las atracciones</h1>
+        </section>
+        <div class="row">
+        
+            <section class="col-md-2" aria-labelledby="gettingStartedTitle">
+                <p>
+                    <asp:Button Text="Iniciar atracción" ID="btnIniciar" runat="server" CssClass="btn btn-primary btn-md" OnClick="btnIniciar_Click" />
+                </p>
+            </section>
+        
+            <section class="col-md-2" aria-labelledby="gettingStartedTitle">
+                <p>
+                    <asp:Button Text="Detener atracción" ID="btnDetener" runat="server" CssClass="btn btn-primary btn-md" OnClick="btnDetener_Click" />
+                </p>
+            </section>
+        
+            <section class="col-md-2" aria-labelledby="gettingStartedTitle">
+                <p>
+                    <asp:Button Text="Realizar mantenimiento" ID="btnMantenimiento" runat="server" CssClass="btn btn-primary btn-md" OnClick="btnMantenimiento_Click" />
+                </p>
+            </section>
+        
+            <section class="col-md-2" aria-labelledby="gettingStartedTitle">
+                <p>
+                    <asp:Button Text="Abrir atracción" ID="btnAbrir" runat="server" CssClass="btn btn-primary btn-md" OnClick="btnAbrir_Click" />
+                </p>
+            </section>
+        
+            <section class="col-md-2" aria-labelledby="gettingStartedTitle">
+                <p>
+                    <asp:Button Text="Cerrar atracción" ID="btnCerrar" runat="server" CssClass="btn btn-primary btn-md" OnClick="btnCerrar_Click" />
+                </p>
+            </section>
+        
+            <section class="col-md-2" aria-labelledby="gettingStartedTitle">
+                <p>
+                    <asp:Button Text="Consultar disponibilidad" ID="btnDisponibilidad" runat="server" CssClass="btn btn-primary btn-md" OnClick="btnDisponibilidad_Click" />
+                </p>
+            </section>
+        
+        </div>
+
+        <div class="row">
+            <h3>Información del Estado de la Atracción</h3>
+            <div id="divTablaEstadoAtraccion" runat="server">
+
+
+            </div>
+        </div>
     </main>
+        <link href="css/EstilosParqueAtrac.css" rel="stylesheet" />
 
 </asp:Content>
