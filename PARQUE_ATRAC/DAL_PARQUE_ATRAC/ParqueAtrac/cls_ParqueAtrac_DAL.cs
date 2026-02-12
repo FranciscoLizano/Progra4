@@ -11,9 +11,11 @@ namespace DAL_PARQUE_ATRAC.ParqueAtrac
         // Se definen los atributos de las atracciones
         // Se defina la región para las variables privadas
         #region Variables Privadas
-        private string _sNombre, _sTipo, _sHorario, _sEstado;
+        private string _sNombre, _sTipo, _sHorario;
         private byte _byCapacidad, _byDuracion;
         private bool _bDisponibilidad;
+        private int _iEstado; /* Los estados pueden ser 1 = Encendida, 2 = Encendida, 3 = Abierta, 4 = Cerrada
+                                  5 = En Mantenimiento*/
 
         #endregion
 
@@ -45,9 +47,9 @@ namespace DAL_PARQUE_ATRAC.ParqueAtrac
         public bool bDisponibilidad { get => _bDisponibilidad; set => _bDisponibilidad = value; }
         /// <summary>
         /// Esto representa el estado de la atraccion los cuales pueden ser  
-        /// (Encendida/Apagada/Abierta/Cerrada/EnMantenimiento)
+        /// (1= Encendida, 2 = Apagada, 3 = Abierta, 4 = Cerrada, 5 = EnMantenimiento)
         /// </summary>
-        public string sEstado { get => _sEstado; set => _sEstado = value; }
+        public int iEstado { get => _iEstado; set => _iEstado = value; }
 
         #endregion
     }

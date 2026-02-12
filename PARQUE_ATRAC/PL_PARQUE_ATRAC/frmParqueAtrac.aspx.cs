@@ -57,6 +57,7 @@ namespace PL_PARQUE_ATRAC
             obj_ParqueAtrac_DAL.sHorario = "K-D 9:00 AM-5:00 PM";
 
             ObtenerInformacion(ref obj_ParqueAtrac_DAL);
+            LimpiaEstadoAtraccion();
         }
 
         /// <summary>
@@ -74,6 +75,7 @@ namespace PL_PARQUE_ATRAC
             obj_ParqueAtrac_DAL.sHorario = "K-D 9:00 AM-5:00 PM";
 
             ObtenerInformacion(ref obj_ParqueAtrac_DAL);
+            LimpiaEstadoAtraccion();
         }
 
         /// <summary>
@@ -91,6 +93,7 @@ namespace PL_PARQUE_ATRAC
             obj_ParqueAtrac_DAL.sHorario = "K-D 9:00 AM-5:00 PM";
 
             ObtenerInformacion(ref obj_ParqueAtrac_DAL);
+            LimpiaEstadoAtraccion();
         }
 
         /// <summary>
@@ -108,6 +111,7 @@ namespace PL_PARQUE_ATRAC
             obj_ParqueAtrac_DAL.sHorario = "K-D 9:00 AM-5:00 PM";
 
             ObtenerInformacion(ref obj_ParqueAtrac_DAL);
+            LimpiaEstadoAtraccion();
         }
 
         /// <summary>
@@ -125,6 +129,7 @@ namespace PL_PARQUE_ATRAC
             obj_ParqueAtrac_DAL.sHorario = "K-D 9:00 AM-5:00 PM";
 
             ObtenerInformacion(ref obj_ParqueAtrac_DAL);
+            LimpiaEstadoAtraccion();
         }
 
         /// <summary>
@@ -142,6 +147,7 @@ namespace PL_PARQUE_ATRAC
             obj_ParqueAtrac_DAL.sHorario = "K-D 9:00 AM-5:00 PM";
 
             ObtenerInformacion(ref obj_ParqueAtrac_DAL);
+            LimpiaEstadoAtraccion();
         }
 
         /// <summary>
@@ -159,6 +165,7 @@ namespace PL_PARQUE_ATRAC
             obj_ParqueAtrac_DAL.sHorario = "K-D 9:00 AM-5:00 PM";
 
             ObtenerInformacion(ref obj_ParqueAtrac_DAL);
+            LimpiaEstadoAtraccion();
         }
 
         /// <summary>
@@ -176,6 +183,7 @@ namespace PL_PARQUE_ATRAC
             obj_ParqueAtrac_DAL.sHorario = "K-D 9:00 AM-5:00 PM";
 
             ObtenerInformacion(ref obj_ParqueAtrac_DAL);
+            LimpiaEstadoAtraccion();
         }
 
         /// <summary>
@@ -193,6 +201,7 @@ namespace PL_PARQUE_ATRAC
             obj_ParqueAtrac_DAL.sHorario = "K-D 9:00 AM-5:00 PM";
 
             ObtenerInformacion(ref obj_ParqueAtrac_DAL);
+            LimpiaEstadoAtraccion();
         }
 
         /// <summary>
@@ -214,7 +223,7 @@ namespace PL_PARQUE_ATRAC
             }
             else
             {
-                disponibilidad = "En operación";
+                disponibilidad = "Operativa";
             }
 
             html.Append("<table>");
@@ -271,38 +280,175 @@ namespace PL_PARQUE_ATRAC
                 return;
             }
 
-            if (obj_ParqueAtrac_DAL.sEstado == "Encendido")
+            if (obj_ParqueAtrac_DAL.bDisponibilidad == false)
             {
-                mensaje = "alert('La Atracción debe estar encendida para poder activar la reversa.')";
+                mensaje = "alert('La atracción debe de estar Operativa para realizar esta acción')";
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "Mensaje de la página", mensaje, true);
+                LimpiaEstadoAtraccion();
                 return;
+            }
+
+            if (obj_ParqueAtrac_DAL.iEstado != 3)
+            {
+                mensaje = "alert('Para iniciar la atracción esta debe de estar abierta')";
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "Mensaje de la página", mensaje, true);
+                LimpiaEstadoAtraccion();
             }
             else
             {
-                obj_ParqueAtrac_BLL.Reversa(ref obj_ParqueAtrac_DAL);
+                obj_ParqueAtrac_BLL.Iniciar(ref obj_ParqueAtrac_DAL);
                 ObtenerInformacion(ref obj_ParqueAtrac_DAL);
-                ObtienerEstadoAtraccion(ref obj_ParqueAtrac_DAL, "Activar Reversa");
+                ObtienerEstadoAtraccion(ref obj_ParqueAtrac_DAL, "Iniciada");
             }
 
         }
         protected void btnDetener_Click(object sender, EventArgs e)
         {
+            obj_ParqueAtrac_DAL = (cls_ParqueAtrac_DAL)Session[VariableSesion];
+
+            string mensaje = string.Empty;
+
+            if (obj_ParqueAtrac_DAL.sNombre == null)
+            {
+                mensaje = "alert('Debe Seleccionar la Atracción')";
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "Mensaje de la página", mensaje, true);
+                return;
+            }
+
+            if (obj_ParqueAtrac_DAL.bDisponibilidad == false)
+            {
+                mensaje = "alert('La atracción debe de estar Operativa para realizar esta acción')";
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "Mensaje de la página", mensaje, true);
+                LimpiaEstadoAtraccion();
+                return;
+            }
+
+            if (obj_ParqueAtrac_DAL.iEstado != 3)
+            {
+                mensaje = "alert('Para detener la atracción esta debe de estar abierta')";
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "Mensaje de la página", mensaje, true);
+                LimpiaEstadoAtraccion();
+            }
+            else
+            {
+                obj_ParqueAtrac_BLL.Iniciar(ref obj_ParqueAtrac_DAL);
+                ObtenerInformacion(ref obj_ParqueAtrac_DAL);
+                ObtienerEstadoAtraccion(ref obj_ParqueAtrac_DAL, "Detenida");
+            }
 
         }
         protected void btnMantenimiento_Click(object sender, EventArgs e)
         {
+            obj_ParqueAtrac_DAL = (cls_ParqueAtrac_DAL)Session[VariableSesion];
+
+            string mensaje = string.Empty;
+
+            if (obj_ParqueAtrac_DAL.sNombre == null)
+            {
+                mensaje = "alert('Debe Seleccionar la Atracción')";
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "Mensaje de la página", mensaje, true);
+                return;
+            }
+
+            if (obj_ParqueAtrac_DAL.bDisponibilidad == false)
+            {
+                mensaje = "alert('La atracción debe de estar Operativa para realizar esta acción')";
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "Mensaje de la página", mensaje, true);
+                LimpiaEstadoAtraccion();
+                return;
+            }
+
+            if (obj_ParqueAtrac_DAL.iEstado == 3)
+            {
+                mensaje = "alert('No se puede realizar mantenimiento a la atracción si esta se encuentra abierta')";
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "Mensaje de la página", mensaje, true);
+                LimpiaEstadoAtraccion();
+            }
+            else
+            {
+                obj_ParqueAtrac_BLL.Mantenimiento(ref obj_ParqueAtrac_DAL);
+                ObtenerInformacion(ref obj_ParqueAtrac_DAL);
+                ObtienerEstadoAtraccion(ref obj_ParqueAtrac_DAL, "En Mantenimiento");
+            }
 
         }
         protected void btnAbrir_Click(object sender, EventArgs e)
         {
+            obj_ParqueAtrac_DAL = (cls_ParqueAtrac_DAL)Session[VariableSesion];
+
+            string mensaje = string.Empty;
+
+            if (obj_ParqueAtrac_DAL.sNombre == null)
+            {
+                mensaje = "alert('Debe Seleccionar la Atracción')";
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "Mensaje de la página", mensaje, true);
+                return;
+            }
+
+            if (obj_ParqueAtrac_DAL.bDisponibilidad == false)
+            {
+                mensaje = "alert('La atracción debe de estar Operativa para realizar esta acción')";
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "Mensaje de la página", mensaje, true);
+                LimpiaEstadoAtraccion();
+            }
+            else
+            {
+                obj_ParqueAtrac_BLL.Abrir(ref obj_ParqueAtrac_DAL);
+                ObtenerInformacion(ref obj_ParqueAtrac_DAL);
+                ObtienerEstadoAtraccion(ref obj_ParqueAtrac_DAL, "Abierta");
+            }
 
         }
         protected void btnCerrar_Click(object sender, EventArgs e)
         {
+            obj_ParqueAtrac_DAL = (cls_ParqueAtrac_DAL)Session[VariableSesion];
 
+            string mensaje = string.Empty;
+
+            if (obj_ParqueAtrac_DAL.sNombre == null)
+            {
+                mensaje = "alert('Debe Seleccionar la Atracción')";
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "Mensaje de la página", mensaje, true);
+                return;
+            }
+
+            if (obj_ParqueAtrac_DAL.bDisponibilidad == false)
+            {
+                mensaje = "alert('La atracción debe de estar Operativa para realizar esta acción')";
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "Mensaje de la página", mensaje, true);
+                LimpiaEstadoAtraccion();
+            }
+            else
+            {
+                obj_ParqueAtrac_BLL.Cerrar(ref obj_ParqueAtrac_DAL);
+                ObtenerInformacion(ref obj_ParqueAtrac_DAL);
+                ObtienerEstadoAtraccion(ref obj_ParqueAtrac_DAL, "Cerrada");
+            }
         }
         protected void btnDisponibilidad_Click(object sender, EventArgs e)
         {
+            obj_ParqueAtrac_DAL = (cls_ParqueAtrac_DAL)Session[VariableSesion];
+
+            string mensaje = string.Empty;
+            string Disponibilidad = string.Empty;
+
+            if (obj_ParqueAtrac_DAL.sNombre == null)
+            {
+                mensaje = "alert('Debe Seleccionar la Atracción')";
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "Mensaje de la página", mensaje, true);
+                return;
+            }
+
+            if (obj_ParqueAtrac_DAL.bDisponibilidad == false)
+            {
+                Disponibilidad = "Fuera de Servicio";
+            }
+            else
+            {
+                Disponibilidad = "Operativa";
+            }
+            mensaje = "alert('La Atracción se encuentra: "+ Disponibilidad + "')";
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "Mensaje de la página", mensaje, true);
 
         }
         /// <summary>
@@ -312,16 +458,29 @@ namespace PL_PARQUE_ATRAC
         /// <param name="e"></param>
         protected void ObtienerEstadoAtraccion(ref cls_ParqueAtrac_DAL obj_ParqueAtrac_DAL, string accion)
         {
-            string Disponibilidad = string.Empty;
+            string Estado = string.Empty;
             var html = new StringBuilder();
 
-            if (obj_ParqueAtrac_DAL.bDisponibilidad == false)
+            switch (obj_ParqueAtrac_DAL.iEstado)
             {
-                Disponibilidad = "Apagado";
-            }
-            else
-            {
-                Disponibilidad = "Encendido";
+                case 1:
+                    Estado = "Encendida";
+                    break;
+                case 2:
+                    Estado = "Apagada";
+                    break;
+                case 3:
+                    Estado = "Abierta";
+                    break;
+                case 4:
+                    Estado = "Cerrada";
+                    break;
+                case 5:
+                    Estado = "En Mantenimiento";
+                    break;
+                default:
+                    Estado = "Desconocido";
+                    break;
             }
 
             html.Append("<table>");
@@ -338,7 +497,7 @@ namespace PL_PARQUE_ATRAC
             html.Append("<td>" + accion + "</td>");
             html.Append("<td>" + obj_ParqueAtrac_DAL.sTipo + "</td>");
             html.Append("<td>" + obj_ParqueAtrac_DAL.sNombre.ToString() + "</td>");
-            html.Append("<td>" + obj_ParqueAtrac_DAL.sEstado.ToString() + "</td>");
+            html.Append("<td>" + Estado + "</td>");
             html.Append("</tr>");
             html.Append("</tbody>");
             html.Append("</table>");
@@ -347,5 +506,18 @@ namespace PL_PARQUE_ATRAC
         }
         #endregion
 
+        #region Eventos para limpiar datos
+
+        /// <summary>
+        /// En este evento se envía vacía la información de la acción de la atracción
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        protected void LimpiaEstadoAtraccion()
+        {
+            divTablaEstadoAtraccion.InnerHtml = "";
+        }
+
+        #endregion
     }
 }
