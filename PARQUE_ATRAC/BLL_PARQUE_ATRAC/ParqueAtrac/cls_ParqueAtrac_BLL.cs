@@ -11,7 +11,7 @@ namespace BLL_PARQUE_ATRAC.ParqueAtrac
     {
 
         /// <summary>
-        /// Se inicia la atracción y coloca el estado en encendida
+        /// Se inicia la atracción y coloca el estado en abierta
         /// </summary>
         /// <param name="obj_Vehiculo_DAL"></param>
         public void Iniciar(ref cls_ParqueAtrac_DAL obj_ParqueAtrac_DAL)
@@ -47,7 +47,7 @@ namespace BLL_PARQUE_ATRAC.ParqueAtrac
         }
 
         /// <summary>
-        /// Se cierra la atracción y se coloca en estado cerrada
+        /// Se coloca la atracción en mantenimiento y se coloca en estado en mantenimiento
         /// </summary>
         /// <param name="obj_Vehiculo_DAL"></param>
         public void Mantenimiento(ref cls_ParqueAtrac_DAL obj_ParqueAtrac_DAL)

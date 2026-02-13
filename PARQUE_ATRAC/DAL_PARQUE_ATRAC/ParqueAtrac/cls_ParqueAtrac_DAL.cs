@@ -47,7 +47,7 @@ namespace DAL_PARQUE_ATRAC.ParqueAtrac
         public bool bDisponibilidad { get => _bDisponibilidad; set => _bDisponibilidad = value; }
         /// <summary>
         /// Esto representa el estado de la atraccion los cuales pueden ser  
-        /// (1= Encendida, 2 = Apagada, 3 = Abierta, 4 = Cerrada, 5 = EnMantenimiento)
+        /// (1= Encendida, 2 = Apagada, 3 = Abierta, 4 = Cerrada, 5 = En Mantenimiento)
         /// </summary>
         public int iEstado { get => _iEstado; set => _iEstado = value; }
 

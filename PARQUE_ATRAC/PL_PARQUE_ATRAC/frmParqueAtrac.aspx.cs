@@ -266,7 +266,11 @@ namespace PL_PARQUE_ATRAC
         #endregion
 
         #region Los eventos de las acciones de las atracciones
-
+        /// <summary>
+        /// Evento para iniciar la atracción
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void btnIniciar_Click(object sender, EventArgs e)
         {
             obj_ParqueAtrac_DAL = (cls_ParqueAtrac_DAL)Session[VariableSesion];
@@ -284,7 +288,13 @@ namespace PL_PARQUE_ATRAC
             {
                 mensaje = "alert('La atracción debe de estar Operativa para realizar esta acción')";
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "Mensaje de la página", mensaje, true);
-                LimpiaEstadoAtraccion();
+                return;
+            }
+
+            if (obj_ParqueAtrac_DAL.iEstado == 5)
+            {
+                mensaje = "alert('La atracción no puede iniciar por estar en mantenimiento')";
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "Mensaje de la página", mensaje, true);
                 return;
             }
 
@@ -292,7 +302,6 @@ namespace PL_PARQUE_ATRAC
             {
                 mensaje = "alert('Para iniciar la atracción esta debe de estar abierta')";
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "Mensaje de la página", mensaje, true);
-                LimpiaEstadoAtraccion();
             }
             else
             {
@@ -302,6 +311,12 @@ namespace PL_PARQUE_ATRAC
             }
 
         }
+
+        /// <summary>
+        /// Evento para detener la atracción
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void btnDetener_Click(object sender, EventArgs e)
         {
             obj_ParqueAtrac_DAL = (cls_ParqueAtrac_DAL)Session[VariableSesion];
@@ -319,7 +334,13 @@ namespace PL_PARQUE_ATRAC
             {
                 mensaje = "alert('La atracción debe de estar Operativa para realizar esta acción')";
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "Mensaje de la página", mensaje, true);
-                LimpiaEstadoAtraccion();
+                return;
+            }
+
+            if (obj_ParqueAtrac_DAL.iEstado == 5)
+            {
+                mensaje = "alert('La atracción no se puede detener por estar en mantenimiento')";
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "Mensaje de la página", mensaje, true);
                 return;
             }
 
@@ -327,7 +348,6 @@ namespace PL_PARQUE_ATRAC
             {
                 mensaje = "alert('Para detener la atracción esta debe de estar abierta')";
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "Mensaje de la página", mensaje, true);
-                LimpiaEstadoAtraccion();
             }
             else
             {
@@ -337,6 +357,12 @@ namespace PL_PARQUE_ATRAC
             }
 
         }
+
+        /// <summary>
+        /// Evento para dar mantenimiento a la atracción
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void btnMantenimiento_Click(object sender, EventArgs e)
         {
             obj_ParqueAtrac_DAL = (cls_ParqueAtrac_DAL)Session[VariableSesion];
@@ -354,7 +380,6 @@ namespace PL_PARQUE_ATRAC
             {
                 mensaje = "alert('La atracción debe de estar Operativa para realizar esta acción')";
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "Mensaje de la página", mensaje, true);
-                LimpiaEstadoAtraccion();
                 return;
             }
 
@@ -362,7 +387,6 @@ namespace PL_PARQUE_ATRAC
             {
                 mensaje = "alert('No se puede realizar mantenimiento a la atracción si esta se encuentra abierta')";
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "Mensaje de la página", mensaje, true);
-                LimpiaEstadoAtraccion();
             }
             else
             {
@@ -372,6 +396,12 @@ namespace PL_PARQUE_ATRAC
             }
 
         }
+
+        /// <summary>
+        /// Evento para abrir la atracción
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void btnAbrir_Click(object sender, EventArgs e)
         {
             obj_ParqueAtrac_DAL = (cls_ParqueAtrac_DAL)Session[VariableSesion];
@@ -385,11 +415,17 @@ namespace PL_PARQUE_ATRAC
                 return;
             }
 
+            if (obj_ParqueAtrac_DAL.iEstado == 5)
+            {
+                mensaje = "alert('La atracción no se puede abrir por estar en mantenimiento')";
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "Mensaje de la página", mensaje, true);
+                return;
+            }
+
             if (obj_ParqueAtrac_DAL.bDisponibilidad == false)
             {
                 mensaje = "alert('La atracción debe de estar Operativa para realizar esta acción')";
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "Mensaje de la página", mensaje, true);
-                LimpiaEstadoAtraccion();
             }
             else
             {
@@ -399,6 +435,12 @@ namespace PL_PARQUE_ATRAC
             }
 
         }
+
+        /// <summary>
+        /// Evento para cerrar la atracción
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void btnCerrar_Click(object sender, EventArgs e)
         {
             obj_ParqueAtrac_DAL = (cls_ParqueAtrac_DAL)Session[VariableSesion];
@@ -416,7 +458,6 @@ namespace PL_PARQUE_ATRAC
             {
                 mensaje = "alert('La atracción debe de estar Operativa para realizar esta acción')";
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "Mensaje de la página", mensaje, true);
-                LimpiaEstadoAtraccion();
             }
             else
             {
@@ -425,6 +466,12 @@ namespace PL_PARQUE_ATRAC
                 ObtienerEstadoAtraccion(ref obj_ParqueAtrac_DAL, "Cerrada");
             }
         }
+
+        /// <summary>
+        /// Evento para ver la disponibilidad de la atracción
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void btnDisponibilidad_Click(object sender, EventArgs e)
         {
             obj_ParqueAtrac_DAL = (cls_ParqueAtrac_DAL)Session[VariableSesion];
@@ -441,16 +488,17 @@ namespace PL_PARQUE_ATRAC
 
             if (obj_ParqueAtrac_DAL.bDisponibilidad == false)
             {
-                Disponibilidad = "Fuera de Servicio";
+                mensaje = "alert('La atracción debe de estar Operativa para realizar esta acción')";
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "Mensaje de la página", mensaje, true);
+                return ;
             }
-            else
-            {
-                Disponibilidad = "Operativa";
-            }
+
+            Disponibilidad = "Operativa";
             mensaje = "alert('La Atracción se encuentra: "+ Disponibilidad + "')";
             ScriptManager.RegisterStartupScript(this, this.GetType(), "Mensaje de la página", mensaje, true);
 
         }
+
         /// <summary>
         /// En este evento se muestra la información de las acciones de las atracciones
         /// </summary>
