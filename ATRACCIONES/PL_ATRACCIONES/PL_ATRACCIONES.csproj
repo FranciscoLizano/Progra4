@@ -70,11 +70,12 @@
     <Content Include="css\Style.css" />
     <Content Include="frmAtracciones.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="img\Caballito.gif" />
     <Content Include="img\Caballitos.png" />
     <Content Include="img\Chocones.png" />
+    <Content Include="img\Fondo.png" />
     <Content Include="img\La torre.png" />
-    <Content Include="img\LogoUAM.png" />
-    <Content Include="img\LogoUAM_W.png" />
+    <Content Include="img\LogoC.png" />
     <Content Include="img\Montaña rusa.png" />
     <Content Include="img\Rueda de chicago.png" />
     <Content Include="img\Sillas voladoras.png" />

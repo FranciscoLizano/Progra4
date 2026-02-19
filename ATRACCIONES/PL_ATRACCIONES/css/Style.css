@@ -140,6 +140,37 @@ div[class^="card"] .img {
     color: rgb(209, 209, 6);
 }
 
+.caballito {
+    color: rgb(252,219,163);
+}
+.chocones {
+    color: rgb(56,203,166);
+}
+.abismo {
+    color: rgb(132,164,205);
+}
+.serpiente {
+    color: rgb(204,70,1);
+}
+.giros {
+    color: rgb(61,131,58);
+}
+.sillas {
+    color: rgb(186,120,41);
+}
+.sky {
+    color: rgb(113,134,91);
+}
+.flyer {
+    color: rgb(96,126,180);
+}
+.tarantula {
+    color: rgb(245,134,89);
+}
+.tornado {
+    color: rgb(194,204,216);
+}
+
 .addCard {
     position: absolute;
     width: 100%;

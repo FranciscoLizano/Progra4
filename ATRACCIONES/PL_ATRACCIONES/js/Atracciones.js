@@ -161,13 +161,17 @@ function SeleccionAtraccion() {
                     $("#divTablaInfoAtracciones").html(res);
 
                     Swal.fire({
-                        position: 'center-center',
-                        icon: 'success',
-                        title: "Atracción",
-                        text: "La atraccion fue seleccionada",
-                        showConfirmButton: false,
-                        timer: 2500,
-                        timerProgressBar: true
+                        title: "La atraccion fue seleccionada.",
+                        width: 600,
+                        padding: "3em",
+                        color: "#716add",
+                        background: "url(/img/Fondo.png) no-repeat center center",
+                        backdrop: `
+                        rgba(0,0,123,0.4)
+                        url("/img/Caballito.gif")
+                        Center top
+                        no-repeat  `,
+                        confirmButtonText: "Aceptar"
                     });
                 }
                 else {

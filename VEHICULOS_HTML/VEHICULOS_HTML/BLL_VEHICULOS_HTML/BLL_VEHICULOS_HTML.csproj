@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{464BA4F2-9032-4451-A193-404BCD014D2F}</ProjectGuid>
+    <ProjectGuid>{8FCF05C8-1250-45A1-878F-458927B1184D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>BLL_VEHICULOS_HTML</RootNamespace>
@@ -42,11 +42,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Vehiculos\cls_vehiculos_BLL.cs" />
+    <Compile Include="Vehiculos\cls_Vehiculos_BLL.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DAL_VEHICULOS_HTML\DAL_VEHICULOS_HTML.csproj">
-      <Project>{962b6682-da62-4de0-bdb9-745713c15540}</Project>
+      <Project>{eb78e6b6-3f81-44e8-b8cb-df44344d575c}</Project>
       <Name>DAL_VEHICULOS_HTML</Name>
     </ProjectReference>
   </ItemGroup>

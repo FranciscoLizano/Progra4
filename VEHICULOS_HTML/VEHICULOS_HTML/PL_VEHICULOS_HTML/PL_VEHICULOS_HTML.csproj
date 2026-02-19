@@ -7,7 +7,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{0EF30BE2-5020-47D0-A226-A6AAC0A331CC}</ProjectGuid>
+    <ProjectGuid>{4AE4C112-2372-46F7-8CDF-9BA8C1AED2B6}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -16,7 +16,7 @@
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
-    <IISExpressSSLPort>44352</IISExpressSSLPort>
+    <IISExpressSSLPort>44357</IISExpressSSLPort>
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
@@ -67,7 +67,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="css\Style.css" />
+    <Content Include="css\style.css" />
     <Content Include="frmVehiculosHTML.aspx" />
     <Content Include="Global.asax" />
     <Content Include="img\ACELERAR.png" />
@@ -115,11 +115,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BLL_VEHICULOS_HTML\BLL_VEHICULOS_HTML.csproj">
-      <Project>{464ba4f2-9032-4451-a193-404bcd014d2f}</Project>
+      <Project>{8fcf05c8-1250-45a1-878f-458927b1184d}</Project>
       <Name>BLL_VEHICULOS_HTML</Name>
     </ProjectReference>
     <ProjectReference Include="..\DAL_VEHICULOS_HTML\DAL_VEHICULOS_HTML.csproj">
-      <Project>{962b6682-da62-4de0-bdb9-745713c15540}</Project>
+      <Project>{eb78e6b6-3f81-44e8-b8cb-df44344d575c}</Project>
       <Name>DAL_VEHICULOS_HTML</Name>
     </ProjectReference>
   </ItemGroup>
@@ -136,9 +136,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>50364</DevelopmentServerPort>
+          <DevelopmentServerPort>53369</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>https://localhost:44352/</IISUrl>
+          <IISUrl>https://localhost:44357/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
