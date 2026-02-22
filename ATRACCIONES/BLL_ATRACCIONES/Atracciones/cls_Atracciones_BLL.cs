@@ -16,7 +16,7 @@ namespace BLL_ATRACCIONES.Atracciones
         /// <param name="obj_Atracciones_DAL"></param>
         public void Iniciar(ref cls_Atracciones_DAL obj_Atracciones_DAL)
         {
-            obj_Atracciones_DAL.iEstado = 3;
+            obj_Atracciones_DAL.iEstado = 1;
         }
 
         /// <summary>
@@ -25,7 +25,7 @@ namespace BLL_ATRACCIONES.Atracciones
         /// <param name="obj_Atracciones_DAL"></param>
         public void Abrir(ref cls_Atracciones_DAL obj_Atracciones_DAL)
         {
-            obj_Atracciones_DAL.iEstado = 3;
+            obj_Atracciones_DAL.bCondicion = true;
         }
 
         /// <summary>
@@ -43,7 +43,11 @@ namespace BLL_ATRACCIONES.Atracciones
         /// <param name="obj_Atracciones_DAL"></param>
         public void Cerrar(ref cls_Atracciones_DAL obj_Atracciones_DAL)
         {
-            obj_Atracciones_DAL.iEstado = 4;
+            obj_Atracciones_DAL.bCondicion = false;
+            if (obj_Atracciones_DAL.iEstado == 3)
+            {
+                obj_Atracciones_DAL.iEstado = 2;
+            }
         }
 
         /// <summary>
@@ -52,7 +56,7 @@ namespace BLL_ATRACCIONES.Atracciones
         /// <param name="obj_Atracciones_DAL"></param>
         public void Mantenimiento(ref cls_Atracciones_DAL obj_Atracciones_DAL)
         {
-            obj_Atracciones_DAL.iEstado = 5;
+            obj_Atracciones_DAL.iEstado = 3;
         }
 
     }

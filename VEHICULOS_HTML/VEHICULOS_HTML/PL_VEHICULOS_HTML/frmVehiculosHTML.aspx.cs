@@ -47,7 +47,7 @@ namespace PL_VEHICULOS_HTML
                 }
                 else
                 {
-                    transmision = "False";
+                    transmision = "Manual";
                 }
 
                 _mensaje = "" +

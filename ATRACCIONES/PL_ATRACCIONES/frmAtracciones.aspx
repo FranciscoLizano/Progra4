@@ -352,7 +352,7 @@
     </div>
 </div>
 	
-	<%--<div class="header" style="margin-top:50px">
+	<div class="header" style="margin-top:50px">
 		<div class="title">Acciones de las atracciones</div>
 	</div>
 	<div class="list2" style="margin-top:50px;">
@@ -365,12 +365,88 @@
 			<div class="images">
 			  <div class="img2">
 				<div class="">
-				  <img src="img/ON.png" onclick="javascript: btnEncender()">
+				  <img src="img/Iniciar.png" onclick="javascript: btnIniciar()">
 				</div>
 			  </div>
 			</div>
 		  </div>
 		</div>
+
+		<div class="card-seller">
+		  <div class="basicInfo">
+			<div class="title">
+				<div class="name">Detener</div>
+			</div>
+			<div class="images">
+			  <div class="img2">
+				<div class="">
+				  <img src="img/Detener.png" onclick="javascript: btnDetener()">
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+
+		<div class="card-seller">
+		  <div class="basicInfo">
+			<div class="title">
+				<div class="name">Mantenimiento</div>
+			</div>
+			<div class="images">
+			  <div class="img2">
+				<div class="">
+				  <img src="img/Mantenimiento.png" onclick="javascript: btnMantenimiento()">
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+
+		<div class="card-seller">
+		  <div class="basicInfo">
+			<div class="title">
+				<div class="name">Abrir</div>
+			</div>
+			<div class="images">
+			  <div class="img2">
+				<div class="">
+				  <img src="img/Abrir.png" onclick="javascript: btnAbrir()">
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+
+		<div class="card-seller">
+		  <div class="basicInfo">
+			<div class="title">
+				<div class="name">Cerrar</div>
+			</div>
+			<div class="images">
+			  <div class="img2">
+				<div class="">
+				  <img src="img/Cerrar.png" onclick="javascript: btnCerrar()">
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+
+		<div class="card-seller">
+		  <div class="basicInfo">
+			<div class="title">
+				<div class="name">Disponibilidad</div>
+			</div>
+			<div class="images">
+			  <div class="img2">
+				<div class="">
+				  <img src="img/Disponibilidad.png" onclick="javascript: btnDisponibilidad()">
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+
 	</div>
 	<div class="header" style="margin-top:50px">
 		<div class="title">Información de Estado de las atracciones</div>
@@ -378,7 +454,7 @@
     <div class="list" style="margin-top:50px;">
         <div id="divTablaEstadoAtracciones" style="width:50%">
         </div>
-    </div>--%>
+    </div>
 </body>
     
 </html>

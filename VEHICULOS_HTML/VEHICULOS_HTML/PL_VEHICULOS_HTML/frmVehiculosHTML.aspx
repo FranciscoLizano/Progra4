@@ -85,7 +85,7 @@
           <div class="basicInfo">
             <div class="title">
       
-              <div class="name">BAIC BJ40</div>
+              <div class="name">TIGGO 4 PRO</div>
             </div>
             <div class="images">
               <div class="img">
@@ -99,7 +99,7 @@
               <div class="ellipse" style="background:#2B2B2B"></div>
             </div>
             <div class="addCard">
-              <i class="fa-solid fa-eye" onclick="javascript: ()"></i>
+              <i class="fa-solid fa-eye" onclick="javascript: btnTigo()"></i>
             </div>
           </div>
           <div class="mores">
@@ -115,7 +115,7 @@
     <div class="basicInfo">
       <div class="title">
 
-        <div class="name">BAIC BJ40</div>
+        <div class="name">SPARK</div>
       </div>
       <div class="images">
         <div class="img">
@@ -129,12 +129,12 @@
         <div class="ellipse" style="background:#2B2B2B"></div>
       </div>
       <div class="addCard">
-        <i class="fa-solid fa-eye" onclick="javascript: ()"></i>
+        <i class="fa-solid fa-eye" onclick="javascript: btnSPARK()"></i>
       </div>
     </div>
     <div class="mores">
       <div class="stars">
-        <i class="fa-regular fa-calendar text-yellow"> 2025</i>
+        <i class="fa-regular fa-calendar text-yellow"> 2023</i>
       </div>
       <div class="price"><i class="fa-regular fa-star"> AT</i></div>
     </div>
@@ -179,7 +179,7 @@
   <div class="basicInfo">
     <div class="title">
       
-      <div class="name">Toyota Hilux</div>
+      <div class="name">X3</div>
     </div>
     <div class="images">
       <div class="img">
@@ -193,12 +193,12 @@
       <div class="ellipse" style="background:#2B2B2B"></div>
     </div>
     <div class="addCard">
-      <i class="fa-solid fa-eye" onclick="javascript: ()"></i>
+      <i class="fa-solid fa-eye" onclick="javascript: btnBMW()"></i>
     </div>
   </div>
   <div class="mores">
     <div class="stars">
-      <i class="fa-regular fa-calendar text-yellow"> 2024</i>
+      <i class="fa-regular fa-calendar text-yellow"> 2023</i>
     </div>
     <div class="price"><i class="fa-regular fa-star"> Manual</i></div>
   </div>
@@ -211,7 +211,7 @@
   <div class="basicInfo">
     <div class="title">
       
-      <div class="name">Toyota Hilux</div>
+      <div class="name">Tucson</div>
     </div>
     <div class="images">
       <div class="img">
@@ -225,7 +225,7 @@
       <div class="ellipse" style="background:#2B2B2B"></div>
     </div>
     <div class="addCard">
-      <i class="fa-solid fa-eye" onclick="javascript: ()"></i>
+      <i class="fa-solid fa-eye" onclick="javascript: btnTucson()"></i>
     </div>
   </div>
   <div class="mores">

@@ -28,11 +28,67 @@ function btnBAIC() {
     seleccionVehiculo();
 }
 
+function btnTigo() {
+    //Crear las cookies con la información del vehículo seleccionado
+    //(nombre, valor, {tiempo vida, path, domain})
+    $.cookie('MARCA', 'Chery', { expires: TLC, path: '/', domain: g_Dominio });
+    $.cookie('MODELO', 'TIGGO 4 PRO', { expires: TLC, path: '/', domain: g_Dominio });
+    $.cookie('TRANSMISION', 'true', { expires: TLC, path: '/', domain: g_Dominio });
+    $.cookie('VELOCIDAD', '0', { expires: TLC, path: '/', domain: g_Dominio });
+    $.cookie('KILOMETRAJE', '0', { expires: TLC, path: '/', domain: g_Dominio });
+    $.cookie('ESTADO', 'False', { expires: TLC, path: '/', domain: g_Dominio });
+    $.cookie('ANIO', '2025', { expires: TLC, path: '/', domain: g_Dominio });
+
+    seleccionVehiculo();
+}
+
+function btnSPARK() {
+    //Crear las cookies con la información del vehículo seleccionado
+    //(nombre, valor, {tiempo vida, path, domain})
+    $.cookie('MARCA', 'Chevrolet', { expires: TLC, path: '/', domain: g_Dominio });
+    $.cookie('MODELO', 'SPARK', { expires: TLC, path: '/', domain: g_Dominio });
+    $.cookie('TRANSMISION', 'true', { expires: TLC, path: '/', domain: g_Dominio });
+    $.cookie('VELOCIDAD', '0', { expires: TLC, path: '/', domain: g_Dominio });
+    $.cookie('KILOMETRAJE', '0', { expires: TLC, path: '/', domain: g_Dominio });
+    $.cookie('ESTADO', 'False', { expires: TLC, path: '/', domain: g_Dominio });
+    $.cookie('ANIO', '2023', { expires: TLC, path: '/', domain: g_Dominio });
+
+    seleccionVehiculo();
+}
+
 function btnHilux() {
     //Crear las cookies con la información del vehículo seleccionado
     //(nombre, valor, {tiempo vida, path, domain})
     $.cookie('MARCA', 'TOYOTA', { expires: TLC, path: '/', domain: g_Dominio });
     $.cookie('MODELO', 'HILUX', { expires: TLC, path: '/', domain: g_Dominio });
+    $.cookie('TRANSMISION', 'False', { expires: TLC, path: '/', domain: g_Dominio });
+    $.cookie('VELOCIDAD', '0', { expires: TLC, path: '/', domain: g_Dominio });
+    $.cookie('KILOMETRAJE', '0', { expires: TLC, path: '/', domain: g_Dominio });
+    $.cookie('ESTADO', 'False', { expires: TLC, path: '/', domain: g_Dominio });
+    $.cookie('ANIO', '2024', { expires: TLC, path: '/', domain: g_Dominio });
+
+    seleccionVehiculo();
+}
+
+function btnBMW() {
+    //Crear las cookies con la información del vehículo seleccionado
+    //(nombre, valor, {tiempo vida, path, domain})
+    $.cookie('MARCA', 'BMW', { expires: TLC, path: '/', domain: g_Dominio });
+    $.cookie('MODELO', 'X3', { expires: TLC, path: '/', domain: g_Dominio });
+    $.cookie('TRANSMISION', 'False', { expires: TLC, path: '/', domain: g_Dominio });
+    $.cookie('VELOCIDAD', '0', { expires: TLC, path: '/', domain: g_Dominio });
+    $.cookie('KILOMETRAJE', '0', { expires: TLC, path: '/', domain: g_Dominio });
+    $.cookie('ESTADO', 'False', { expires: TLC, path: '/', domain: g_Dominio });
+    $.cookie('ANIO', '2023', { expires: TLC, path: '/', domain: g_Dominio });
+
+    seleccionVehiculo();
+}
+
+function btnTucson() {
+    //Crear las cookies con la información del vehículo seleccionado
+    //(nombre, valor, {tiempo vida, path, domain})
+    $.cookie('MARCA', 'Hyundai', { expires: TLC, path: '/', domain: g_Dominio });
+    $.cookie('MODELO', 'Tucson', { expires: TLC, path: '/', domain: g_Dominio });
     $.cookie('TRANSMISION', 'False', { expires: TLC, path: '/', domain: g_Dominio });
     $.cookie('VELOCIDAD', '0', { expires: TLC, path: '/', domain: g_Dominio });
     $.cookie('KILOMETRAJE', '0', { expires: TLC, path: '/', domain: g_Dominio });
@@ -83,7 +139,7 @@ function seleccionVehiculo() {
                         title: "Ejercicio de Vehículos HTML",
                         text: "El vehículo ha sido seleccionado",
                         showConfirmButton: false,
-                        timer: 4500,
+                        timer: 1000,
                         timerProgressBar: true
                     });
                 }

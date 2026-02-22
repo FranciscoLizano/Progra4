@@ -13,9 +13,8 @@ namespace DLL_ATRACCIONES.Atracciones
         #region Variables Privadas
         private string _sNombre, _sTipo, _sHorario;
         private byte _byCapacidad, _byDuracion;
-        private bool _bDisponibilidad;
-        private int _iEstado; /* Los estados pueden ser 1 = Encendida, 2 = Encendida, 3 = Abierta, 4 = Cerrada
-                                  5 = En Mantenimiento*/
+        private bool _bDisponibilidad, _bCondicion;
+        private int _iEstado; // Los estados pueden ser 1 = Encendida, 2 = Detenida, 3 = En Mantenimiento
 
         #endregion
 
@@ -42,14 +41,18 @@ namespace DLL_ATRACCIONES.Atracciones
         /// </summary>
         public byte byDuracion { get => _byDuracion; set => _byDuracion = value; }
         /// <summary>
-        /// Esto representa si la atracción se puede utilizar si esta operativa es un 1 y fuera de servicio es un 0
+        /// Esto representa si la atracción se puede utilizar si esta operativa true y fuera de servicio false
         /// </summary>
         public bool bDisponibilidad { get => _bDisponibilidad; set => _bDisponibilidad = value; }
         /// <summary>
         /// Esto representa el estado de la atraccion los cuales pueden ser  
-        /// (1= Encendida, 2 = Apagada, 3 = Abierta, 4 = Cerrada, 5 = En Mantenimiento)
+        /// (1= Encendida, 2 = Detenida, 3 = En Mantenimiento)
         /// </summary>
         public int iEstado { get => _iEstado; set => _iEstado = value; }
+        /// <summary>
+        /// Esto representa si la atracción abierta true o cerrada false
+        /// </summary>
+        public bool bCondicion { get => _bCondicion; set => _bCondicion = value; }
 
         #endregion
 
