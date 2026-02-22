@@ -204,7 +204,7 @@ function SeleccionAtraccion() {
                         url("/img/Caballito.gif")
                         Center top
                         no-repeat  `,
-                        confirmButtonText: "Aceptar",
+                        showConfirmButton: false,
                         timer: 1500
                     });
                 }
