@@ -16,6 +16,7 @@
     <script src="js/jquery.cookie.js"></script>
     <script src="js/Atracciones.js"></script>
 
+
   <style>
         .header {
             display: flex;
