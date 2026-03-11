@@ -44,8 +44,10 @@
     <Compile Include="BD\cls_BD_DAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TaskPlanner\cls_Actividades_Tareas_DAL.cs" />
+    <Compile Include="TaskPlanner\cls_Auditoria_DAL.cs" />
     <Compile Include="TaskPlanner\cls_Estados_Tareas_DAL.cs" />
     <Compile Include="TaskPlanner\cls_Prioridades_Tareas_DAL.cs" />
+    <Compile Include="TaskPlanner\cls_Tareas_DAL.cs" />
     <Compile Include="TaskPlanner\cls_Usuarios_DAL.cs" />
   </ItemGroup>
   <ItemGroup />
