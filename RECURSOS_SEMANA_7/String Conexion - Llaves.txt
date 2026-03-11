@@ -1,0 +1,23 @@
+<connectionStrings>
+	<add name="WIN_AUT" providerName="System.Data.SqlClient" connectionString="Data Source=.; 
+                          Initial Catalog=CRUD_APP_ULT_GEN; 
+                          Integrated Security=True;"/>
+
+
+	<add name="SQL_AUT" providerName="System.Data.SqlClient" connectionString="Data Source=.; 
+                          Initial Catalog=CRUD_APP_ULT_GEN; 
+                          Persist Security Info=True;
+                          User ID=sa;
+                          Password=;"/>
+</connectionStrings>
+
+
+<appSettings>
+	<add key="SP_LogIn_Usuarios" value="dbo.USP_InicioSesion_Usuarios"/>
+	<add key="SP_INFO_Usuarios" value="dbo.USP_Informacion_Usuarios" />
+</appSettings>
+
+
+
+##########Libreria Sweet Alert####################
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
